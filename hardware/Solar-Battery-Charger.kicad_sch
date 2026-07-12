@@ -3141,7 +3141,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "kml-custom:BQ24650RVAT"
+		(symbol "KMLib_IC_Power:BQ24650RVAT_Charger_Controller"
 			(pin_names
 				(offset 0.254)
 			)
@@ -10583,7 +10583,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:BQ24650RVAT")
+		(lib_id "KMLib_IC_Power:BQ24650RVAT_Charger_Controller")
 		(at 177.8 93.98 0)
 		(unit 1)
 		(body_style 1)
@@ -10614,7 +10614,7 @@
 				)
 			)
 		)
-		(property "Footprint" "KML-Custom:RVA16_2P14X2P14"
+		(property "Footprint" "KMLib_IC_SMD:RVA16_2P14X2P14"
 			(at 177.8 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -12004,7 +12004,7 @@
 				)
 			)
 		)
-		(property "Footprint" "KML-Custom:CDBA-G"
+		(property "Footprint" "KMLib_Passives_SMD:CDBA-G"
 			(at 52.07 21.59 0)
 			(hide yes)
 			(show_name no)
