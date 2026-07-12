@@ -3237,7 +3237,7 @@
 					)
 				)
 			)
-			(symbol "BQ24650RVAT_0_1"
+			(symbol "BQ24650RVAT_Charger_Controller_0_1"
 				(polyline
 					(pts
 						(xy 7.62 5.08) (xy 7.62 -25.4)
