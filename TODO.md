@@ -1,32 +1,22 @@
 # TODO
 
-## Pass 1 — CI Pipeline
+## Redesign — schematic
 
-- [x] Pipeline added
-- [x] DRC: FAIL — 33 errors (clearance, footprint_type_mismatch, drill_out_of_range, starved_thermal, solder_mask_bridge, unconnected_items)
-- [x] ERC: PASS
-- [ ] Fab: SKIPPED (blocked by DRC pre-flight)
-- [ ] gen-kibot-index: SKIPPED
-- [ ] deploy-pages: SKIPPED
+- [x] Rebuild charger stage from the BQ24650 datasheet and EVM-639 reference design
+- [x] All symbols resolve from KiCad-Master-Lib (no `*-rescue` / `kml-custom` references)
+- [x] ERC clean (`kicad-cli sch erc --severity-all`: 0 violations)
+- [ ] Design review of the schematic against the EVM-639 BOM (MPPSET divider, sense resistor, inductor, TS network)
 
-### DRC Errors (33)
+## Redesign — layout
 
-- clearance violations (6)
-- footprint_type_mismatch (1)
-- drill_out_of_range: 0.254mm actual vs 0.300mm min (4)
-- starved_thermal: incomplete thermal relief (1)
-- solder_mask_bridge: rear mask bridges different nets (multiple)
-- unconnected_items (multiple)
+- [ ] Assign footprints to `NT1` (`NetTie_2`) and `JP1` (`Jumper_3_Open`)
+- [ ] Place and route the board (PCB currently holds only the Nano socket, buck stage and mechanicals; nothing routed)
+- [ ] Clear DRC schematic parity (66 missing footprints, 3 net conflicts, 1 extra footprint at last run)
+- [ ] Clear DRC (4 unconnected items; 36 silk-to-edge, 6 silk-over-copper, 4 silk-overlap, 4 isolated-copper warnings)
+- [ ] Confirm board outline and mounting holes against the slice standard
 
-## Pass 2 — Pre-Fab Review
+## Pre-fab
 
-- [ ] Fix 6x clearance violations
-- [ ] Fix 1x footprint type mismatch (expected SMD, got TH)
-- [ ] Fix 4x drill out of range (increase drill diameter to ≥0.3mm)
-- [ ] Fix 1x starved thermal relief
-- [ ] Fix solder mask bridge errors
-- [ ] Fix unconnected items
-- [ ] Verify BOM completeness and sourcing
-- [ ] Confirm board outline and mounting holes
+- [ ] Verify BOM sourcing (KiBot `BoM/` outputs)
 - [ ] Footprint verification against datasheets
 - [ ] Design review sign-off

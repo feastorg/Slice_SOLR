@@ -26,6 +26,7 @@ permalink: /:path/
 
 exclude:
   - TODO.md
+  - design-scratch.md
   - kibot/index_template.md
   - kibot/config.kibot.site.yml
   - README.md
