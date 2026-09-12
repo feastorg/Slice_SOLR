@@ -6,7 +6,7 @@ name: "Field Solar Power"
 status: "prototype"
 category: "power"
 
-summary: "Solar-powered field power slice with LM2576 buck regulator and battery charging."
+summary: "Solar-powered field power slice: BQ24650 MPPT battery charger with AP63205 5 V buck."
 description: null
 
 # ── Versioning ────────────────────────────────────────────────────────────────
@@ -31,7 +31,7 @@ hardware:
       - "ATmega328P"
   primary_ic:
     manufacturer: "Texas Instruments"
-    part_number: "LM2576"
+    part_number: "BQ24650"
   hw_gen_current: 1
   hw_gen_supported: [1]
   pcb:
@@ -99,11 +99,12 @@ artifacts:
   pcb: "hardware/BREAD_Slice.kicad_pcb"
   firmware: null
   docs: null
-  bom: "documentation/BOM_TEMP.ods"
-  gerbers: "hardware/Gerbers.zip"
+  bom: null
+  gerbers: null
   pick_and_place: null
   datasheets:
-    - "documentation/lm2576.pdf"
+    - "https://www.ti.com/lit/ds/symlink/bq24650.pdf"
+    - "https://www.ti.com/lit/ug/sluu444a/sluu444a.pdf"
 
 # ── Manufacturing ─────────────────────────────────────────────────────────────
 manufacturing: null
@@ -139,7 +140,7 @@ repository:
 # ── Metadata ──────────────────────────────────────────────────────────────────
 metadata:
   created: "2026-05-19"
-  updated: "2026-05-19"
+  updated: "2026-09-12"
   tags:
     - "solar"
     - "power-supply"
